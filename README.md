@@ -1,11 +1,17 @@
 # KIAPI D2X Connection
 
-## 개요
+## 개요  
+<img src="figures/introduction.png" width="100%" height="100%" title="introduction" alt="introduction"></img>
+**(과-22) 클라우드 기반 자율주행 차량 오류 및 한계 상황 지능형 원격지원 기술 개발**  
+Device-D2X 통신 위한 프로그램
 
+## Device-D2X 통신  
+<img src="figures/d2x_intro.png" width="100%" height="100%" title="d2x_intro" alt="d2x_intro"></img>
+자율주행차량의 정보를 원격지원 서버로 전송하기 위한 통신 장비  
 
 ## 실행 환경
 Ubuntu 22.04  
-ROS2 Humble
+ROS2 Humble  
 KIAPI D2X Device
 
 ## A. 파일 다운로드
@@ -63,12 +69,12 @@ cd kiapi_d2x_connection
 
 
 ### Service  
-> D2X 접속 및 연결 요청
+> D2X 접속 및 연결 요청  
 /device_d2x_connection (device_msgs/DeviceCommunication)
 /device_d2x_registration (device_msgs/DeviceRegistration)
 
 
 ### Action  
-> D2X 접속 상태
+> D2X 접속 상태  
 /device_d2x_status (device_msgs/DeviceStatus)
 
