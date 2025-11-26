@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# ROS 2 환경 설정
+echo "[INFO] Set ROS 2 workspace..."
+source ~/kiapi_d2x/kiapi_d2x/install/setup.bash
+
+# 노드 실행
+echo "[INFO] Run TCP/IP Connection node..."
+ros2 launch device_d2x_ui device_d2x_ui.launch 

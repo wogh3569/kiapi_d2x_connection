@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+echo "[INFO] Install Programs"
+
+echo "[ 1/4] Unpacking programs..."
+echo "       프로그램 설치를 위한 사용자 계정의 암호가 필요합니다."
+echo "       설치 프로그램: 1. unzip(압축 해제 프로그램)"                
+echo "                      2. geographic(GPS 데이터 처리 프로그램)"
+
+source /opt/ros/humble/setup.bash
+sudo apt update
+sudo apt install zip
+unzip executable
+ret_code=$?
+
+if [ "$ret_code" -ne 0 ]; then
+    echo "[ERROR] executable file doesn't exist!"
+    echo "[ERROR] Press any key to exit..."
+    read -rsn1
+    exit 1
+fi
+
+mv "executable" ".executable"
+
+echo "[2 /4] Install dependencies..."
+sudo apt install -y libgeographic-dev
+
+echo "[3 /4] Build dependencies..."
+cd ~/kiapi_d2x/kiapi_d2x
+colcon build --symlink-install --packages-select infra_info_msgs novatel_oem7_msgs device_msgs comm_perform_msgs
+ret_code=$?
+
+if [ "$ret_code" -ne 0 ]; then
+    echo "[ERROR] Fail to build dependencies!"
+    echo "[ERROR] Press any key to exit..."
+    read -rsn1
+    exit 1
+fi
+
+source install/setup.bash
+source ~/kiapi_d2x/kiapi_d2x/install/setup.bash
+
+echo "[4 /4] Build Nodes..."
+
+source ~/kiapi_d2x/kiapi_d2x/install/setup.bash
+cd ~/kiapi_d2x/kiapi_d2x
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --catkin-skip-building-tests --symlink-install
+ret_code=$?
+
+if [ "$ret_code" -ne 0 ]; then
+    echo "[ERROR] Fail to build nodes!"
+    echo "[ERROR] Press any key to exit..."
+    read -rsn1
+    exit 1
+fi
+
+cd ~/
+
+echo "[INFO] All Process Done"
+echo "[INFO] Press any key to exit..."
+read -rsn1

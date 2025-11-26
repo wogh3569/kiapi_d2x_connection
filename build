@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+source ~/kiapi_d2x/kiapi_d2x/install/setup.bash
+cd ~/kiapi_d2x/kiapi_d2x
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --catkin-skip-building-tests --symlink-install
+ret_code=$?
+
+if [ "$ret_code" -ne 0 ]; then
+    echo "[ERROR] Fail to build nodes!"
+    echo "[ERROR] Press any key to exit..."
+    read -rsn1
+    exit 1
+fi
+
+cd ~/
+
+echo "[INFO] All Process Done"
+echo "[INFO] Press any key to exit..."
+read -rsn1
