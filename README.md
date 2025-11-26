@@ -1,10 +1,12 @@
 # KIAPI D2X Connection
 
+## 개요
 
 
 ## 실행 환경
 Ubuntu 22.04  
 ROS2 Humble
+KIAPI D2X Device
 
 ## A. 파일 다운로드
 ```shell
@@ -30,9 +32,12 @@ cd kiapi_d2x_connection
 
 ## E. 등록 완료
 <img src="figures/result.png" width="100%" height="100%" title="result" alt="result"></img>
-D2X 접속 상태: Vehicle 활성화  
-장치 등록 요청: Request 활성화  
-장치 등록 요청 승인: Response 활성화  
+1. 상태 출력
+   D2X 접속 상태: Vehicle 활성화  
+   장치 등록 요청: Request 활성화  
+   장치 등록 요청 승인: Response 활성화
+2. 시각화 출력
+
 
 <img src="figures/display.png" width="100%" height="100%" title="display" alt="display"></img>
 
@@ -40,7 +45,7 @@ D2X 접속 상태: Vehicle 활성화
 <img src="figures/rosgraph.png" width="100%" height="100%" title="rosgraph" alt="rosgraph"></img>
 
 ### Published Topics
-> D2X 송수신 데이터
+> D2X 송수신 데이터  
 /device_d2x_vehicle_info (vehicle_msgs/DeviceD2XVehicleInfoTransmit)  
 /device_d2x_transmit_info (comm_perform_msgs/CommPerformTransmit)  
 
