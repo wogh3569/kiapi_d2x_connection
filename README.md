@@ -33,8 +33,8 @@ cd kiapi_d2x_connection
 
 ## D. 접속 및 차량 등록
 <img src="figures/connection.png" width="100%" height="100%" title="connection" alt="connection"></img>
-1. D2X 장치 접속
-2. 차량 정보 입력 및 등록 요청
+1. Start: D2X 장치 접속
+2. Register: 차량 정보 입력 및 등록 요청
 
 ## E. 등록 완료
 <img src="figures/result.png" width="100%" height="100%" title="result" alt="result"></img>
