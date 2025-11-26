@@ -39,9 +39,9 @@ cd kiapi_d2x_connection
 ## E. 등록 완료
 <img src="figures/result.png" width="100%" height="100%" title="result" alt="result"></img>
 1. 상태 출력
-   D2X 접속 상태: Vehicle 활성화  
-   장치 등록 요청: Request 활성화  
-   장치 등록 요청 승인: Response 활성화
+   D2X 접속 상태: Vehicle 활성화 (녹색)  
+   장치 등록 요청: Request 활성화 (녹색)    
+   장치 등록 요청 승인: Response 활성화 (녹색)  
 2. 시각화 출력
 
 
