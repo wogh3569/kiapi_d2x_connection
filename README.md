@@ -4,9 +4,6 @@
 <img src="figures/introduction.png" width="100%" height="100%" title="introduction" alt="introduction"></img>
 **(과-22) 클라우드 기반 자율주행 차량 오류 및 한계 상황 지능형 원격지원 기술 개발**  
 원격지원 시나리오 및 인터페이스 SW 공개(예정): https://kiapi-msit-22.github.io/
-
-Device-D2X 통신 위한 프로그램
-
 ## Device-D2X 통신  
 <img src="figures/d2x_intro.png" width="100%" height="100%" title="d2x_intro" alt="d2x_intro"></img>
 자율주행차량의 정보를 원격지원 서버로 전송하기 위한 통신 장비  
