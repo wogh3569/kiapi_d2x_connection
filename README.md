@@ -3,7 +3,7 @@
 ## 개요  
 <img src="figures/introduction.png" width="100%" height="100%" title="introduction" alt="introduction"></img>
 **(과-22) 클라우드 기반 자율주행 차량 오류 및 한계 상황 지능형 원격지원 기술 개발**  
-원격지원 시나리오 및 인터페이스 SW 공개(예정):  
+원격지원 시나리오 / 통신 인터페이스 / 데이터셋 공개(예정):  
 https://kiapi-msit-22.github.io/  
 
 ## Device-D2X 통신  
