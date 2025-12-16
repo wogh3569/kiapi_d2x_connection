@@ -16,7 +16,7 @@ KIAPI D2X Device
 
 ## A. 파일 다운로드
 ```shell
-git clone
+git clone https://github.com/wogh3569/kiapi_d2x_connection.git
 ```
 
 ## B. 프로그램 설치
@@ -60,18 +60,18 @@ cd kiapi_d2x_connection
 /perception/object_recognition/tracking/objects (autoware_perception_msgs/TrackedObjects)  
 
 > GNSS, IMU 정보  
-/novatel/oem7/imu/data (sensor_msgs/Imu)
-/novatel/oem7/fix (sensor_msgs/NavSatFix)
+/novatel/oem7/imu/data (sensor_msgs/Imu)  
+/novatel/oem7/fix (sensor_msgs/NavSatFix)  
 
 > 차량 정보  
-/localization/kinematic_state (nav_msgs/Odometry)
+/localization/kinematic_state (nav_msgs/Odometry)  
 /vehicle_info/vehicle_status/can (vehicle_msgs/DeviceD2XVehicleInfoTransmit)
 
 
 ### Service  
 > D2X 접속 및 연결 요청  
-/device_d2x_connection (device_msgs/DeviceCommunication)
-/device_d2x_registration (device_msgs/DeviceRegistration)
+/device_d2x_connection (device_msgs/DeviceCommunication)  
+/device_d2x_registration (device_msgs/DeviceRegistration)  
 
 
 ### Action  
